@@ -113,23 +113,36 @@ se desarrolla un relato intenso que combina misterio, terror psicológico y dram
  de identidad y pertenencia</td></tr>
 </table>
     
-<p style="text-align:center; font-weight:bold; color:#6b4c7a;">Video que puedes ver con resumen:</p>
-<div class="video-container">
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/wuddOVKkLqs"
-    title="Video YouTube"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+<div class="video-wrapper">
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/wuddOVKkLqs"
+      title="Video YouTube"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
+
 <style>
+.video-wrapper {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  margin-top: 30px;
+}
+
 .video-container {
   position: relative;
+  width: 80%;            /* puedes ajustar el tamaño (ej: 60%, 100%, etc.) */
+  max-width: 800px;      /* ancho máximo en pantallas grandes */
   padding-bottom: 56.25%; /* relación 16:9 */
   height: 0;
   overflow: hidden;
+  border-radius: 8px;     /* opcional: esquinas redondeadas */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* opcional: sombra elegante */
 }
+
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -138,6 +151,7 @@ se desarrolla un relato intenso que combina misterio, terror psicológico y dram
   height: 100%;
 }
 </style>
+
     
 <h2 class="table-title">Manga: Takopi</h2>
 <table>
@@ -193,6 +207,7 @@ Nanami descubre que su nuevo rol implica responsabilidades sobrenaturales
 
 </body>
 </html>
+
 
 
 
