@@ -53,14 +53,24 @@
             background-color: #e8d8f0;
         }
 
-        video {
-            display: block;
-            margin: 20px auto; /* Centrado */
-            width: 480px;       /* Tamaño reducido */
-            height: 270px;      /* Mantener proporción 16:9 */
+        /* 🔹 Centrado y tamaño del contenedor de video */
+        .video-container {
+            position: relative;
+            width: 480px;   /* Ancho del video */
+            height: 270px;  /* Altura del video (16:9) */
+            margin: 20px auto; /* Centrar horizontalmente */
             border: 2px solid #ceacce;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .table-title {
@@ -68,6 +78,13 @@
             font-size: 1.2em;
             font-weight: bold;
             margin-top: 40px;
+        }
+
+        .video-label {
+            text-align: center;
+            font-weight: bold;
+            color: #6b4c7a;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -87,6 +104,7 @@
         ← Regresar a la página principal
     </a>
 </div>
+
 <h1>Información de los Mangas</h1>
 
 <h2 class="table-title">Manga: El verano que Hikaru murió</h2>
@@ -104,15 +122,8 @@
     <tr><td>Resumen</td><td>La historia sigue los eventos misteriosos y perturbadores 
 de un verano en el que Hikaru, un joven aparentemente normal, muere de manera inesperada.
  A medida que sus amigos y familiares intentan lidiar con la pérdida, empiezan a experimentar fenómenos
- extraños y visiones inquietantes que parecen conectados con la muerte de Hikaru. 
-Entre la exploración de sus emociones y el enfrentamiento con sucesos sobrenaturales, 
-se desarrolla un relato intenso que combina misterio, terror psicológico y drama humano</td></tr>
-    <tr><td>Calificación</td><td>8/10 - 9/10</td></tr>
-    <tr><td>Dato extra</td><td>l autor, Mokumokuren, ha declarado que la obra no fue concebida como una
- historia de romance entre dos chicos, sin embargo se concidera una narrativa queer que aborda temas
- de identidad y pertenencia</td></tr>
+ extraños y visiones inquietantes que parecen conectados con la muerte de Hikaru.</td></tr>
 </table>
-    
 <p class="video-label">Video que puedes ver con resumen:</p>
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/wuddOVKkLqs"
@@ -123,8 +134,6 @@ se desarrolla un relato intenso que combina misterio, terror psicológico y dram
     </iframe>
 </div>
 
-
-    
 <h2 class="table-title">Manga: Takopi</h2>
 <table>
     <tr><th>Campo</th><th>Detalle</th></tr>
@@ -132,21 +141,7 @@ se desarrolla un relato intenso que combina misterio, terror psicológico y dram
     <tr><td>Autor</td><td>Taizan 5</td></tr>
     <tr><td>Adaptado al anime?</td><td>Sí</td></tr>
     <tr><td>Emisión</td><td>Manga: Dic 2021 - Mar 2022, Anime: 28/06/2025 - 02/08/2025</td></tr>
-    <tr><td>Género</td><td>Ciencia ficción, Terror, Drama</td></tr>
-    <tr><td>Estado</td><td>Finalizado</td></tr>
-    <tr><td>Plataforma donde verlo</td><td>Crunchyroll</td></tr>
-    <tr><td>Doblaje español</td><td>No</td></tr>
-    <tr><td>Episodios</td><td>6</td></tr>
-    <tr><td>Resumen</td><td>Takopi es un pequeño extraterrestre proveniente del planeta Happy, cuya misión es difundir la felicidad en el universo.
- Al llegar a la Tierra, conoce a Shizuka, una niña profundamente triste y víctima de bullying escolar.
- Decidido a ayudarla, Takopi utiliza su avanzada tecnología para retroceder en el tiempo y cambiar su destino, 
-pero sus intentos solo generan caos y consecuencias trágicas. A medida que la historia avanza,
- Takopi descubre secretos oscuros sobre sí mismo y enfrenta dilemas morales 
-que lo llevan a cuestionar su misión y su propia naturaleza.</td></tr>
-    <tr><td>Calificación</td><td>8.8/10</td></tr>
-    <tr><td>Dato extra</td><td>Adaptación al anime fiel al manga.</td></tr>
 </table>
-    
 <p class="video-label">Video que puedes ver con resumen:</p>
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/0xJumoGyblM"
@@ -157,26 +152,11 @@ que lo llevan a cuestionar su misión y su propia naturaleza.</td></tr>
     </iframe>
 </div>
 
-<h2 class="table-title">Manga: Kamisama</h2>
+<h2 clas="table-title">Manga: Kamisama</h2>
 <table>
     <tr><th>Campos</th><th>Detalles</th></tr>
     <tr><td>Obra</td><td>Soy una Diosa ¿Y ahora qué? (Kamisama Hajimemashita)</td></tr>
     <tr><td>Autor</td><td>Julietta Suzuki</td></tr>
-    <tr><td>Adaptado al anime?</td><td>Sí</td></tr>
-    <tr><td>Emisión</td><td>Manga: 20/02/2008 - 20/05/2016, Anime: 01/10/2012 - 05/01/2015</td></tr>
-    <tr><td>Género</td><td>Comedia romántica, Fantasía, Sobrenatural</td></tr>
-    <tr><td>Estado</td><td>Finalizado</td></tr>
-    <tr><td>Plataforma donde verlo</td><td>Crunchyroll, Amazon Prime</td></tr>
-    <tr><td>Doblaje español</td><td>Sí</td></tr>
-    <tr><td>Episodios</td><td>25</td></tr>
-    <tr><td>Resumen</td><td>La historia sigue a Nanami Momozono, una adolescente que, tras perder su hogar debido a las deudas de su padre, 
-se encuentra sin rumbo. Su vida da un giro inesperado cuando salva a un hombre de un perro y, como agradecimiento,
- él le otorga su santuario y el título de diosa de la tierra. Al llegar al templo, 
-Nanami descubre que su nuevo rol implica responsabilidades sobrenaturales
- y que deberá enfrentarse a diversos desafíos en el mundo espiritual.</td></tr>
-    <tr><td>Calificación</td><td>4/5 y 8.1/10</td></tr>
-    <tr><td>Dato extra</td><td>Si bien el anime adapta la mayor parte de la obra no se adaptan todos los arcos, el manga conto con
-25 volumenes, despues de la obra principal se publicaron capitulos especiales..</td></tr>
 </table>
 <p class="video-label">Video que puedes ver con resumen:</p>
 <div class="video-container">
@@ -186,7 +166,7 @@ Nanami descubre que su nuevo rol implica responsabilidades sobrenaturales
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
     </iframe>
-    </div>
+</div>
 
 </body>
 </html>
