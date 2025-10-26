@@ -1,42 +1,130 @@
-<Html>
+
+<html>
 <head>
-<title> Aplicacion Manga </title>
+  <title>Aplicación Manga</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffe6f2, #fff);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #ff99cc;
+      width: 70%;
+      margin: 20px auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ff66a3;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #cc0066;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff66a3;
+      margin-top: 10px;
+    }
+
+    h2 {
+      color: #ff3399;
+    }
+
+    /* 📚 Galería de mangas */
+    .manga-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 40px 20px;
+    }
+
+    .manga-item {
+      text-align: center;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .manga-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .manga-item img {
+      border-radius: 10px;
+      width: 250px;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .manga-item p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #cc0066;
+    }
+
+    /* 🔗 Enlace superior */
+    .volver {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #ff99cc;
+      color: white;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .volver:hover {
+      background: #ff66a3;
+    }
+  </style>
 </head>
+
 <body>
-<center>
-<hr>
-<i>Mangas</i>
-<hr>
-</center>
-<center>
-  <a href="https://kimberleemh.github.io/LeerMangas/index.html">Regresar a la pagina principal</a>
-<Font face="Arial" Size=5 color=FF99cc>
-<h1>“Mangas principales”</h1>
-</Font>
-<h2>MANGAS DISPONIBLESS</h2>
-<i>Tocar el manga para verlo</i>
-<br>
-<br>
-<br>
-<div style="display: flex; justify-content: center; gap: 30px;">
-<div style="text-align: center;"><a href="El verano que hikaru murio.html"><img src="img95.jpg"width="250" height="400"></a>
-<br> Ir a Manga 1 
-</div>
-<div><a href="Takopi.html"><img src="img28.jpg" width="300" height="400"></a>
-<br> Ir a Manga 2 
-</div>
-<div><a href="Kamisama.html"><img src="img79.jpg" width="300" height="400"></a>
-<br> Ir a Manga 3 
-</div>
-<script>
-</center>
+  <center>
+   
+    <a href="Index.html" class="volver">Regresar a la página principal</a>
+
+    <h1>🌸 Mangas principales 🌸</h1>
+    <h2>MANGAS DISPONIBLES</h2>
+    <i>Toca el manga para verlo</i>
+
+    <div class="manga-container">
+      <div class="manga-item">
+        <a href="El verano que hikaru murio.html">
+          <img src="img3.jpg" alt="El verano que Hikaru murió">
+        </a>
+        <p>Ir a Manga 1</p>
+      </div>
+
+      <div class="manga-item">
+        <a href="Takopi.html">
+          <img src="img28.jpg" alt="Takopi">
+        </a>
+        <p>Ir a Manga 2</p>
+      </div>
+
+      <div class="manga-item">
+        <a href="Kamisama.html">
+          <img src="img79.jpg" alt="Kamisama">
+        </a>
+        <p>Ir a Manga 3</p>
+      </div>
+    </div>
+  </center>
 </body>
 </html>
-
-
-
-
-
-
-
-
