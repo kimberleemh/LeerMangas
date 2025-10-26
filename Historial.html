@@ -1,20 +1,150 @@
-<Html>
+
+<html> 
 <head>
-<title> Aplicacion Historial </title>
+<title>Mangas con comentarios y recomendaciones</title>
+<style>
+  body { font-family: 'Poppins', Arial, sans-serif; text-align: center; background: #fff0f5; margin:0; padding:20px; }
+  h1 { color: #ff3399; }
+  .manga-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .manga-item { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 280px; }
+  .manga-item img { width: 250px; height: 380px; border-radius: 10px; object-fit: cover; cursor:pointer; }
+  input, textarea { width: 90%; padding: 8px; margin: 5px 0; border-radius: 5px; border: 1px solid #ccc; }
+  button { padding: 6px 12px; background-color: #ff66a3; color: white; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 10px; }
+  button:hover { background-color: #cc0066; }
+  .comentario, .recomendacion { text-align: left; border-bottom: 1px solid #ff99cc; padding: 5px; margin: 5px 0; max-width: 250px; margin-left: auto; margin-right: auto; display: flex; justify-content: space-between; align-items: center; }
+  .comentario span { flex: 1; }
+  h2 { color: #ff3399; }
+  .small-btn { padding: 2px 6px; font-size: 0.8em; margin-left: 5px; }
+</style>
 </head>
 <body>
-<center>
-<hr>
-<i>Historial de Mangas</i>
-<hr>
-</center>
-<center>
-<a href="https://kimberleemh.github.io/LeerMangas/index.html">Regresar a la pagina principal</a>
-<Font face="Arial" Size=5 color=6cc9da>
-<h1>“Historal de Mangas”</h1>
-</Font>
-<h2>MANGAS POPULARES</h2>
-</center>
-</body>
 
+<Font face="Arial" Size=5>
+<a href="index.html" style="color: #c93384">  ← 🏡 Volver al inicio</a>
+<a name="Fin"></a>
+</Font>
+
+<h1>🌸Comentarios y recomendaciones de Manga 🌸</h1>
+
+<div class="manga-container">
+
+  <div class="manga-item">
+    <h2>El verano que Hikaru murió</h2>
+    <a href="El verano que hikaru murio.html">
+      <img src="img95.jpg" alt="El verano que Hikaru murió">
+    </a>
+    <h3>Comentarios</h3>
+    <div id="comentarios-hikaru"></div>
+    <input type="text" id="input-hikaru" placeholder="Escribe un comentario">
+    <button onclick="agregarComentario('hikaru')">Comentar</button>
+    <h3>Recomendaciones</h3>
+    <div id="recomendaciones-hikaru"></div>
+  </div>
+
+  <div class="manga-item">
+    <h2>Takopi</h2>
+    <a href="Takopi.html">
+      <img src="img28.jpg" alt="Takopi">
+    </a>
+    <h3>Comentarios</h3>
+    <div id="comentarios-takopi"></div>
+    <input type="text" id="input-takopi" placeholder="Escribe un comentario">
+    <button onclick="agregarComentario('takopi')">Comentar</button>
+    <h3>Recomendaciones  de historias con trama que puede ser de tu interes</h3>
+    <div id="recomendaciones-takopi"></div>
+  </div>
+
+
+  <div class="manga-item">
+    <h2>Kamisama</h2>
+    <a href="Kamisama.html">
+      <img src="img79.jpg" alt="Kamisama">
+    </a>
+    <h3>Comentarios</h3>
+    <div id="comentarios-kamisama"></div>
+    <input type="text" id="input-kamisama" placeholder="Escribe un comentario">
+    <button onclick="agregarComentario('kamisama')">Comentar</button>
+    <h3>Recomendaciones:</h3>
+    <div id="recomendaciones-kamisama"></div>
+  </div>
+
+</div>
+
+<script>
+const mangas = ['hikaru','takopi','kamisama'];
+
+// Lista de recomendaciones predeterminadas
+const recomendacionesPredeterminadas = {
+  hikaru: ['Blue Period', 'Solanin', 'Your Name'],
+  takopi: ['Umibe no Onnanoko', 'Oyasumi Punpun', 'Silent voice'],
+  kamisama: ['Inuyasha', 'Lovely Complex', 'Kaguya-sama: Love Is War']
+};
+
+// Inicializar datos en localStorage si no existen
+mangas.forEach(manga => {
+  if(!localStorage.getItem(manga)){
+    localStorage.setItem(manga, JSON.stringify({comentarios: []}));
+  }
+});
+
+// Mostrar datos
+function mostrarDatos(manga){
+  const datos = JSON.parse(localStorage.getItem(manga));
+
+  // Comentarios
+  document.getElementById('comentarios-'+manga).innerHTML = datos.comentarios.length ?
+    datos.comentarios.map((c, i) => `
+      <div class="comentario">
+        <span>${c}</span>
+        <div>
+          <button class="small-btn" onclick="editarComentario('${manga}', ${i})">Editar</button>
+          <button class="small-btn" onclick="borrarComentario('${manga}', ${i})">Borrar</button>
+        </div>
+      </div>
+    `).join('') :
+    '<p>No hay comentarios aún.</p>';
+
+  // Recomendaciones predeterminadas
+  document.getElementById('recomendaciones-'+manga).innerHTML =
+    recomendacionesPredeterminadas[manga].map(r => `<div class="recomendacion">${r}</div>`).join('');
+}
+
+// Agregar comentario
+function agregarComentario(manga){
+  const input = document.getElementById('input-'+manga);
+  if(input.value.trim() !== ""){
+    const datos = JSON.parse(localStorage.getItem(manga));
+    datos.comentarios.push(input.value.trim());
+    localStorage.setItem(manga, JSON.stringify(datos));
+    input.value = "";
+    mostrarDatos(manga);
+  }
+}
+
+// Editar comentario
+function editarComentario(manga, index){
+  const datos = JSON.parse(localStorage.getItem(manga));
+  const nuevo = prompt("Edita tu comentario:", datos.comentarios[index]);
+  if(nuevo !== null && nuevo.trim() !== ""){
+    datos.comentarios[index] = nuevo.trim();
+    localStorage.setItem(manga, JSON.stringify(datos));
+    mostrarDatos(manga);
+  }
+}
+
+// Borrar comentario
+function borrarComentario(manga, index){
+  const datos = JSON.parse(localStorage.getItem(manga));
+  if(confirm("¿Deseas borrar este comentario?")){
+    datos.comentarios.splice(index, 1);
+    localStorage.setItem(manga, JSON.stringify(datos));
+    mostrarDatos(manga);
+  }
+}
+
+// Mostrar datos al cargar
+mangas.forEach(manga => mostrarDatos(manga));
+</script>
+
+</body>
 </html>
