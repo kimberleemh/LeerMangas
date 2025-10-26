@@ -53,31 +53,26 @@
             background-color: #e8d8f0;
         }
 
-        /* 🔹 Centrado y tamaño del contenedor de video */
+        /* 🔹 Centrar videos perfectamente */
         .video-container {
             position: relative;
-            width: 480px;   /* Ancho del video */
-            height: 270px;  /* Altura del video (16:9) */
-            margin: 20px auto; /* Centrar horizontalmente */
+            width: 600px;   /* Más ancho */
+            height: 338px;  /* Mantiene proporción 16:9 */
+            margin: 40px auto; /* Centrado horizontal y con espacio arriba/abajo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border: 2px solid #ceacce;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            background-color: #fff;
         }
 
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-        }
-
-        .table-title {
-            text-align: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 40px;
+            border: none;
+            border-radius: 10px;
         }
 
         .video-label {
@@ -85,6 +80,13 @@
             font-weight: bold;
             color: #6b4c7a;
             margin-top: 10px;
+        }
+
+        .table-title {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -108,68 +110,36 @@
 <h1>Información de los Mangas</h1>
 
 <h2 class="table-title">Manga: El verano que Hikaru murió</h2>
-<table>
-    <tr><th>Campos</th><th>Detalles</th></tr>
-    <tr><td>Obra</td><td>El verano que Hikaru murió (Hikaru ga Shinda Natsu)</td></tr>
-    <tr><td>Autor</td><td>Mokumokuren</td></tr>
-    <tr><td>¿Adaptado al anime?</td><td>Sí</td></tr>
-    <tr><td>Emisión</td><td>Manga: 31/08/2021, Anime: 05/07/2025</td></tr>
-    <tr><td>Género</td><td>Terror analógico, Terror psicológico, Drama, Misterio</td></tr>
-    <tr><td>Estado</td><td>No finalizado</td></tr>
-    <tr><td>Plataforma donde verlo</td><td>Netflix</td></tr>
-    <tr><td>Doblaje español</td><td>En producción</td></tr>
-    <tr><td>Episodios</td><td>12</td></tr>
-    <tr><td>Resumen</td><td>La historia sigue los eventos misteriosos y perturbadores 
-de un verano en el que Hikaru, un joven aparentemente normal, muere de manera inesperada.
- A medida que sus amigos y familiares intentan lidiar con la pérdida, empiezan a experimentar fenómenos
- extraños y visiones inquietantes que parecen conectados con la muerte de Hikaru.</td></tr>
-</table>
 <p class="video-label">Video que puedes ver con resumen:</p>
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/wuddOVKkLqs"
             title="El verano que Hikaru murió - Resumen"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
     </iframe>
 </div>
 
 <h2 class="table-title">Manga: Takopi</h2>
-<table>
-    <tr><th>Campo</th><th>Detalle</th></tr>
-    <tr><td>Obra</td><td>Takopi (Takopī no Genzai)</td></tr>
-    <tr><td>Autor</td><td>Taizan 5</td></tr>
-    <tr><td>Adaptado al anime?</td><td>Sí</td></tr>
-    <tr><td>Emisión</td><td>Manga: Dic 2021 - Mar 2022, Anime: 28/06/2025 - 02/08/2025</td></tr>
-</table>
 <p class="video-label">Video que puedes ver con resumen:</p>
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/0xJumoGyblM"
             title="Takopi - Resumen"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
     </iframe>
 </div>
 
-<h2 clas="table-title">Manga: Kamisama</h2>
-<table>
-    <tr><th>Campos</th><th>Detalles</th></tr>
-    <tr><td>Obra</td><td>Soy una Diosa ¿Y ahora qué? (Kamisama Hajimemashita)</td></tr>
-    <tr><td>Autor</td><td>Julietta Suzuki</td></tr>
-</table>
+<h2 class="table-title">Manga: Kamisama</h2>
 <p class="video-label">Video que puedes ver con resumen:</p>
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/jlWYmtxot6I"
             title="Kamisama Hajimemashita - Resumen"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
     </iframe>
 </div>
 
 </body>
 </html>
+
+
 
 
 
