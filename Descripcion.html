@@ -1,20 +1,145 @@
-<Html>
+<html>
 <head>
-<title> Aplicacion Descripciones </title>
-</head>
-<body>
-<center>
-<hr>
-<i>Descripciones de Manga</i>
-<hr>
-</center>
-<center>
-<a href="https://kimberleemh.github.io/LeerMangas/index.html">Regresar a la pagina principal</a>
-<Font face="Arial" Size=5 color=cfbffe>
-<h1>“Descripcion de Manga”</h1>
-</Font>
-<h2>MANGAS INTRODUCTORIOS</h2>
-</center>
-</body>
+    <title>Descripciones de Manga</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(180deg, #778899, #000000);
+            color: #2d2d2d;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #2C3539;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+      color: #C0C0C0;
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #4A5060;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #553c9a;
+            border-bottom: 2px solid #d6bcfa;
+            padding-bottom: 5px;
+        }
+
+        .manga {
+            margin-bottom: 40px;
+        }
+
+        .manga a {
+            color: #0000000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .manga a:hover {
+            color: #9f7aea;
+            text-shadow: 0 0 5px #c4b5fd;
+        }
+
+        .manga p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #805ad5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Descripciones de Manga</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">🏠 Volver a la página principal</a>
+    </nav>
+
+    <main>
+        <h2>Mangas Introductorios</h2>
+
+        <section class="manga">
+            <h3><a href="el verano que hikaru murio.html">📘 El verano que Hikaru murió</a></h3>
+            <p>
+                La historia se centra en dos protagonistas: <b>Yoshiki</b> y <b>Hikaru</b>, mejores amigos inseparables. 
+                Todo cambia cuando Hikaru desaparece en una montaña y regresa dos semanas después... 
+                pero seis meses más tarde, Yoshiki se da cuenta de que ese Hikaru no es el verdadero.
+            </p>
+        </section>
+
+        <section class="manga">
+            <h3><a href="takopi.html">🐙 Takopi</a></h3>
+            <p>
+                Takopi es un ser alienígena con forma de pulpo, inocente y amable. 
+                Su misión es traer felicidad a <b>Shizuka</b>, una niña que sufre por su complicada vida familiar 
+                y el acoso escolar de su compañera <b>Marina</b>. 
+                Una historia conmovedora y trágica sobre la inocencia y la tristeza humana.
+            </p>
+        </section>
+
+        <section class="manga">
+            <h3><a href="kamisama.html">🦊 Kamisama</a></h3>
+            <p>
+                <b>Kamisama</b> es una comedia romántica de fantasía donde <b>Nanami Momozono</b>, 
+                una chica de preparatoria, se convierte en la nueva diosa de la Tierra. 
+                Hereda un templo en ruinas y conoce a <b>Tomoe</b>, un zorro demonio que se convierte en su familiar. 
+                Juntos deben enfrentar desafíos sobrenaturales mientras su relación se fortalece.
+            </p>
+        </section>
+    </main>
+
+</body>
 </html>
